@@ -1,0 +1,17 @@
+kafka:
+  bootstrap-servers: # a list of bootstrap servers of Kafka
+    - "<host>:<port>" # localhost:9092
+  topic: "crawling.<website-name>.page-paths" # crawling.example.page-paths
+  group-id: "<website-name>" # example
+
+neo4j:
+  uri: "bolt://<host>:<port>" # bolt://localhost:7687
+  username: "<username>"
+  password: "<password>"
+  node-label: "<node-label>" # Example
+
+graph-spider:
+  allowed-domains: # a list of allowed domains that the crawler is allowed to crawl.
+    - "<allowed-domain>" # example.com
+  start-urls: # a list of start urls that the crawler start to crawl.
+    - "<start-url>" # https://www.example.com
